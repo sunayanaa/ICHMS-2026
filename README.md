@@ -1,13 +1,17 @@
 # ICHMS-2026
-Source code and results related to the paper.
+# Trustworthy HSI Simulation
 
-The main, self-contained Python 3 script  runs the complete simulation for all three baseline models (DTSC, Full_Auto, Teleop), aggregates the data, and generates the final plots. 
+This repository contains the simulation code for the paper:
+"Dynamic Trust Negotiation for Safe Human-Swarm Interaction: A Decentralized Control Approach"
 
-Requires numpy and matplotlib.
+This code is provided for independent verification of the results presented in Section V.
 
-Run the python3 script to produce 2 plots:
+Files
+`main_simulation.py`: The main, self-contained Python 3 script. This file runs the complete simulation for all three baseline models (DTSC, Full_Auto, Teleop), aggregates the data, and generates the final plots.
+`results_baseline_comparison.png`: The aggregated results plot (Bar Charts) corresponding to Section V.A.
+`results_trust_dynamics.png`: The time-series analysis plot (Line Graph) corresponding to Section V.B.
 
-1) The aggregated results plot (Bar Charts) corresponding to Section V.A. It compares the three baseline models across the key performance metrics: Time to Task Completion (TTC), Safety Violations (NSV), and Control Interventions (CI).
-
-2) The time-series analysis plot (Line Graph) corresponding to Section V.B. It visualizes the internal logic of the DTSC model, showing the dynamic interplay between Negotiated Trust (T_N), Human Trust (T_H), and Swarm Confidence (C_S) during the GPS Failure and False Positive events.
-
+How to Run
+1.  This script is best run in a Google Colab notebook or any Python 3 environment with `numpy` and `matplotlib` installed.
+2.  Paste the contents of `main_simulation.py` into a cell and run it.
+3.  The script will execute all simulation runs (50 per baseline) and then generate the two results plots.
